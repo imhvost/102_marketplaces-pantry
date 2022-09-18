@@ -11,6 +11,7 @@ function marpan_crb_add_blocks() {
 	require_once( TEMPLATEPATH . '/blocks/docs.php' );
 	require_once( TEMPLATEPATH . '/blocks/cases.php' );
 	require_once( TEMPLATEPATH . '/blocks/links.php' );
+	require_once( TEMPLATEPATH . '/blocks/persons.php' );
 	\Carbon_Fields\Carbon_Fields::boot();
 }
 

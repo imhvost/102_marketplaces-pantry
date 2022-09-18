@@ -18,7 +18,6 @@ function marpan_register_post_types_and_taxonomies(){
 			'rewrite'            => array( 'slug' => get_post_field( 'post_name', $services_page_id ), 'with_front' => false ),
 			'supports'           => array( 'title', 'editor', 'thumbnail' ),
 			'show_in_rest'       => true,
-			'hierarchical'       => true,
 		)
 	);
 	

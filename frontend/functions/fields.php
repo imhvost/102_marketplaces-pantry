@@ -167,6 +167,29 @@ function marpan_crb_init_fields() {
 			Field::make( 'text', 'card_title', __( 'Заголовок', DOMAIN ) ),
 			Field::make( 'textarea', 'card_desc', __( 'Описание', DOMAIN ) )
 				->set_rows( 4 ),
+			Field::make( 'association', 'services', __( 'Основная страница', DOMAIN ) )
+				->set_types( array(
+					array(
+						'type'      => 'post',
+						'post_type' => 'service',
+					)
+				) )
+				->set_max( 1 ),
+		) )
+	;
+	
+	/* service */
+	Container::make( 'post_meta', __( 'Поля', DOMAIN ) )
+		->where( 'post_type', '=', 'service' )
+		->add_fields( array (
+			Field::make( 'association', 'services', __( 'Основная страница', DOMAIN ) )
+				->set_types( array(
+					array(
+						'type'      => 'post',
+						'post_type' => 'service',
+					)
+				) )
+				->set_max( 1 ),
 		) )
 	;
 	
